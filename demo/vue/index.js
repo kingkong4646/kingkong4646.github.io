@@ -56,7 +56,7 @@ var app = new Vue({
             this.$refs[id + 'Frame'].style.height = (bbarsTop - tbarBottom)+"px";
         },
         loadYjsData: function(callback){
-            this.$http.get('http://180.168.156.212:2210/proxy/cescloud/tj/index.json', {
+            this.$http.get('//180.168.156.212:2210/proxy/cescloud/tj/index.json', {
                 timeout: 3000
             }).then(function(response) {
                 this.datas = response.body;
@@ -109,7 +109,7 @@ var app = new Vue({
         },
         loadWlwData: function(callback){
             this.wlwDatas = null;
-            this.$http.get('http://180.168.156.212:2210/proxy/cold/mqtt/wlw.json', {
+            this.$http.get('//180.168.156.212:2210/proxy/cold/mqtt/wlw.json', {
                 timeout: 3000,
             }).then(function(response) {
                 this.wlwDatas = response.body;
